@@ -15,6 +15,7 @@ export class BlogPost {
 
   @Column()
   title: string;
+
   @Column()
   content: string;
 

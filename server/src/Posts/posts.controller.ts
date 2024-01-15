@@ -7,13 +7,13 @@ import {
   Post,
   Put,
 } from '@nestjs/common';
-import { UsersService } from './users.service';
-import { BlogPost, BlogPostDTO } from './user.entity';
+import { PostsService } from './posts.service';
+import { BlogPost, BlogPostDTO } from './posts.scheme';
 import { randomInt } from 'crypto';
 
 @Controller('posts')
-export class UsersController {
-  constructor(private usersService: UsersService) {}
+export class PostsController {
+  constructor(private usersService: PostsService) {}
 
   @Get()
   async findAll(): Promise<BlogPost[]> {

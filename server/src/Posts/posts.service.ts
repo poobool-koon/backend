@@ -1,10 +1,10 @@
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { DataSource, Repository } from 'typeorm';
-import { BlogPost } from './user.entity';
+import { BlogPost } from './posts.scheme';
 
 @Injectable()
-export class UsersService {
+export class PostsService {
   constructor(
     @InjectRepository(BlogPost)
     private usersRepository: Repository<BlogPost>,
